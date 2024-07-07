@@ -2,11 +2,11 @@ POST http://localhost:3000/v1/user/sign-in/
 content-type: application/json
 
 {
-    "username": "user1",
-    "password": "user1"
+    "username": "admin1",
+    "password": "admin1"
 }
 ###
-admin1 : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODhmODRlMzYwNDBhNjk0ZjI4ZDU0NCIsInVzZXJuYW1lIjoiYWRtaW4xIiwiX192IjowfSwiaWF0IjoxNzIwMjUzNTQzLCJleHAiOjE3MjAzMzk5NDN9.kVwCfTUkz_-gZznhJtnTWtW72mOsu9VPung8nHUSrpk
+admin1 : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODhmODRlMzYwNDBhNjk0ZjI4ZDU0NCIsInVzZXJuYW1lIjoiYWRtaW4xIiwiX192IjowfSwiaWF0IjoxNzIwMzQ1MjQzLCJleHAiOjE3MjA0MzE2NDN9.rMGWtda-sqFD8jlZPMAQIOqFDGDmpDNX1wYsTAl_afE
 
 user1 : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InVzZXJuYW1lIjoidXNlcjEiLCJfaWQiOiI2Njg4ZmU4NTRkZDgwY2ZiYTFlMjY4NjYiLCJfX3YiOjB9LCJpYXQiOjE3MjAyNTQwODV9.uGd62CgD1iNKzlEG_Pvgvx5IkLBYnqZv6oJPFM2MhFs
 
@@ -17,16 +17,16 @@ POST http://localhost:3000/v1/user/sign-up/
 content-type: application/json
 
 {
-    "username": "user1",
-    "password": "user1",
-    "confirmPassword": "user1",
+    "username": "user2s",
+    "password": "users2s",
+    "confirmPassword": "users2",
     "adminCode": "1234567811"
 }
 
 ###
 GET http://localhost:3000/v1/posts
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODhmODRlMzYwNDBhNjk0ZjI4ZDU0NCIsInVzZXJuYW1lIjoiYWRtaW4xIiwiX192IjowfSwiaWF0IjoxNzIwMjUzNTQzLCJleHAiOjE3MjAzMzk5NDN9.kVwCfTUkz_-gZznhJtnTWtW72mOsu9VPung8nHUSrpk
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODhmODRlMzYwNDBhNjk0ZjI4ZDU0NCIsInVzZXJuYW1lIjoiYWRtaW4xIiwiX192IjowfSwiaWF0IjoxNzIwMzQ1MjQzLCJleHAiOjE3MjA0MzE2NDN9.rMGWtda-sqFD8jlZPMAQIOqFDGDmpDNX1wYsTAl_afE
 
 ###
 POST http://localhost:3000/v1/posts
@@ -34,15 +34,15 @@ content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODhmODRlMzYwNDBhNjk0ZjI4ZDU0NCIsInVzZXJuYW1lIjoiYWRtaW4xIiwiX192IjowfSwiaWF0IjoxNzIwMjUzNTQzLCJleHAiOjE3MjAzMzk5NDN9.kVwCfTUkz_-gZznhJtnTWtW72mOsu9VPung8nHUSrpk
 
 {
-    "title": "test-title-5",
-    "contents": "test-title-5",
-    "isPublished": "false"
+    "title": "test-title-6",
+    "contents": "test-title-6 ",
+    "isPublished": "true"
 }
 
 ###
-GET http://localhost:3000/v1/posts/6687b0aa313712f96fa1f15c
+GET http://localhost:3000/v1/posts/6688fe544dd80cfba1e26861
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODYzMzE0ZDg3YTg0NzUzMjc5MjNhMSIsInVzZXJuYW1lIjoidXNlcjEiLCJfX3YiOjB9LCJpYXQiOjE3MjAxOTE3MjcsImV4cCI6MTcyMDI3ODEyN30.B5Z1_sE70bA_wie7p3HINt2EDGxb_8drsKxLCl1a-fI
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY2ODhmODRlMzYwNDBhNjk0ZjI4ZDU0NCIsInVzZXJuYW1lIjoiYWRtaW4xIiwiX192IjowfSwiaWF0IjoxNzIwMzQ1MjQzLCJleHAiOjE3MjA0MzE2NDN9.rMGWtda-sqFD8jlZPMAQIOqFDGDmpDNX1wYsTAl_afE
 
 ###
 

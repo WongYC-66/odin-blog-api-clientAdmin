@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { API_URL } from './api_url.js'
 
-export default function AllBlog() {
+import BlogPreviewCard from "./BlogPreviewCard.jsx";
 
+export default function AllBlog({ isLogin, setShowPage }) {
     const [posts, setPosts] = useState([
         // {
         //     "_id": "id0001",
@@ -35,25 +36,26 @@ export default function AllBlog() {
 
             let data = await response.json()
             data = data.allPosts
-            console.log(data)
 
             setPosts(data)
         }
 
         fetchData()
 
-    }, [])
+    }, [isLogin])
 
+
+    const newPostClick = () => {
+        setShowPage('AddPost')
+    }
 
     return (
         <div>
             <h1> All Blog </h1>
-            {posts.map(post =>
-                <div key={post._id}>
-                    <h1> {post.title}</h1>
-                    <p>{post.contents}</p>
-                </div>
-            )}
+
+            <button type="button" class="btn btn-primary" onClick={newPostClick}> New Post</button>
+
+            {posts.map(post => <BlogPreviewCard post={post} key={post._id} setShowPage={setShowPage} />)}
 
         </div>
     );

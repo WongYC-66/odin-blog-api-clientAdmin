@@ -28,8 +28,11 @@ export default function BlogPreviewCard(props) {
         });
 
         // redirect
-        setToShow(false)
-        setShowPage("AllBlog")
+        let data = await response.json()
+        if (data && data.message) {
+            // hide the deleted comment
+            setToShow(false)
+        }
     }
 
     return (

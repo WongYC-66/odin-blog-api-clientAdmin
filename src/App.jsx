@@ -78,6 +78,7 @@ function App() {
       {/* Contents */}
 
       <main className="p-3 m-3 flex-fill">
+        {!isLogin && <h2 className='text-danger'>Please sign in as admin account to proceed.</h2>}
         {showPage == 'AllBlog' && <AllBlog isLogin = {isLogin} setShowPage={setShowPage}/>}
         {showPage == 'SignIn' && <SignIn setIsLogin={setIsLogin} setShowPage={setShowPage} />}
         {showPage == 'SignUp' && <SignUp setIsLogin={setIsLogin} setShowPage={setShowPage} />}

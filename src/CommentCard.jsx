@@ -68,8 +68,11 @@ export default function CommentCard(props) {
             headers: myHeaders,
         });
 
-        // hide the deleted comment
-        setToShow(false)
+        let data = await response.json()
+        if(data && data.message){
+            // hide the deleted comment
+            setToShow(false)
+        }
     }
 
     return (

@@ -53,7 +53,7 @@ export default function AllBlog({ isLogin, setShowPage }) {
         <div>
             <h1> All Blog </h1>
 
-            <button type="button" class="btn btn-primary" onClick={newPostClick}> New Post</button>
+            <button type="button" className="btn btn-primary" onClick={newPostClick}> New Post</button>
 
             {posts.map(post => <BlogPreviewCard post={post} key={post._id} setShowPage={setShowPage} />)}
 
